@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box; /*vuelve a meter el contenido dentro del espacio designado*/
+    margin: 10px;
+    padding: 5px;
+    /* border: solid #5E1C9F; */
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #5CF7F5;
+    /* color: #FAEE44; */
+}
+body{
+    min-height: 100%;
+    /* background-color: #5E1C9F; */
+}
+html{
+    height: 100%;
+    /* background-color: #5E1C9F; */
+}
+.grid-container>*{
+    /* text-align: center; */
+    border-radius: 15px;
+    padding: 10px;
+    /* background-color: #5E1C9F; */
+}
+.QuienSoy{
+    grid-area: quiensoy;
+    background-color: #FF636A;
+}
+/* .navbar{
+    grid-area: navbar;
+    background-color: aquamarine;
+} */
+.ProyectosDestacados{
+    grid-area: proyectos;
+    background-color: #FF636A;
+}
+.HabilidadesCompetencias{
+    grid-area: habilidades;
+    background-color: #FF636A;
+}
+.TrayectoriaProfesional{
+    grid-area: trayectoria;
+    background-color: #FF636A;
+}
+.Contacto{
+    grid-area: contacto;
+    background-color: #FF636A;
+}
+.navbar{
+    grid-area: navbar;
+}
+/*Telefono*/
+.grid-container{
+    display: grid;
+    gap: 10px;
+    background-color: #5E1C9F;
+    grid-template-areas:
+    "navbar"
+    "quiensoy"
+    "proyectos"
+    "habilidades"
+    "trayectoria"
+    "contacto"
+    ;
+}
+/*Tablet*/
+@media(min-width:760px){
+    .grid-container{
+        grid-template-columns: auto;
+        background-color: #5E1C9F;
+        grid-template-areas: 
+        "navbar navbar"
+        "quiensoy quiensoy"
+        "proyectos proyectos"
+        "habilidades habilidades"
+        "trayectoria trayectoria"
+        "contacto contacto"
+        ;
+    }
+}
+/*Para escritorio*/
+@media(min-width:900px){
+    .grid-container{
+        grid-template-columns: auto;
+        background-color: #5E1C9F;
+        grid-template-areas: 
+        "navbar navbar navbar"
+        "quiensoy quiensoy quiensoy"
+        "proyectos proyectos proyectos"
+        "habilidades habilidades habilidades"
+        "trayectoria trayectoria trayectoria"
+        "contacto contacto contacto"
+        ;
+    }
+}
+/* img{
+    float: right;
+} */
+/*Animacion*/
+@keyframes profilePic{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.profilePic{
+    animation-name: profilePic;
+    animation-duration: 4s;
+    /* animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; */
+    /*Animation timing-function*/
+}
+
